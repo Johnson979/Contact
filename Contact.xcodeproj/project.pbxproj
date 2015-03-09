@@ -14,6 +14,8 @@
 		9D22892E1AA8E85D00300747 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D22892D1AA8E85D00300747 /* Images.xcassets */; };
 		9D2289311AA8E85D00300747 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D22892F1AA8E85D00300747 /* LaunchScreen.xib */; };
 		9D22893D1AA8E85D00300747 /* ContactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D22893C1AA8E85D00300747 /* ContactTests.swift */; };
+		9D22894B1AA8E94300300747 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D22894A1AA8E94300300747 /* Contact.swift */; };
+		9D22894D1AA8FCE400300747 /* ContactTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D22894C1AA8FCE400300747 /* ContactTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		9D2289361AA8E85D00300747 /* ContactTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContactTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D22893B1AA8E85D00300747 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D22893C1AA8E85D00300747 /* ContactTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTests.swift; sourceTree = "<group>"; };
+		9D22894A1AA8E94300300747 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		9D22894C1AA8FCE400300747 /* ContactTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,7 @@
 		9D2289151AA8E85D00300747 = {
 			isa = PBXGroup;
 			children = (
+				9D22894C1AA8FCE400300747 /* ContactTableViewController.swift */,
 				9D2289201AA8E85D00300747 /* Contact */,
 				9D2289391AA8E85D00300747 /* ContactTests */,
 				9D22891F1AA8E85D00300747 /* Products */,
@@ -85,6 +90,7 @@
 				9D22892D1AA8E85D00300747 /* Images.xcassets */,
 				9D22892F1AA8E85D00300747 /* LaunchScreen.xib */,
 				9D2289251AA8E85D00300747 /* Contact.xcdatamodeld */,
+				9D22894A1AA8E94300300747 /* Contact.swift */,
 				9D2289211AA8E85D00300747 /* Supporting Files */,
 			);
 			path = Contact;
@@ -215,7 +221,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D22894B1AA8E94300300747 /* Contact.swift in Sources */,
 				9D2289291AA8E85D00300747 /* ViewController.swift in Sources */,
+				9D22894D1AA8FCE400300747 /* ContactTableViewController.swift in Sources */,
 				9D2289271AA8E85D00300747 /* Contact.xcdatamodeld in Sources */,
 				9D2289241AA8E85D00300747 /* AppDelegate.swift in Sources */,
 			);
@@ -340,9 +348,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Contact/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Contact/Contact-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -350,9 +361,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Contact/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Contact/Contact-Bridging-Header.h";
 			};
 			name = Release;
 		};
